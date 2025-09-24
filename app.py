@@ -4,7 +4,7 @@ import pandas as pd
 
 import db
 from auth import verify_password
-from utils import inject_css, sidebar_nav, inject_session_persistence
+from utils import inject_css, sidebar_nav, inject_session_persistence, logout_button
 
 
 def set_page_config():
@@ -164,6 +164,10 @@ def main():
 
 	# Logado
 	render_header()
+	
+	# Botão de logout na sidebar
+	logout_button()
+	
 	dashboard()
 
 

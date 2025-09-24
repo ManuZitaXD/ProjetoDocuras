@@ -3,7 +3,7 @@ import db
 import sys
 import os
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-from utils import inject_css, ensure_auth, sidebar_nav, inject_session_persistence
+from utils import inject_css, ensure_auth, sidebar_nav, inject_session_persistence, logout_button
 
 
 def main():
@@ -21,6 +21,9 @@ def main():
 	inject_session_persistence()
 	ensure_auth()
 	a = st.session_state.auth
+
+	# Botão de logout na sidebar
+	logout_button()
 
 	st.markdown("## 👥 Gerenciar Clientes")
 

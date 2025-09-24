@@ -4,7 +4,7 @@ import sys
 import os
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from auth import hash_password
-from utils import inject_css, ensure_superuser, sidebar_nav, inject_session_persistence
+from utils import inject_css, ensure_superuser, sidebar_nav, inject_session_persistence, logout_button
 
 
 def main():
@@ -21,6 +21,9 @@ def main():
 	inject_css()
 	inject_session_persistence()
 	ensure_superuser()
+
+	# Botão de logout na sidebar
+	logout_button()
 
 	st.markdown("## ⚙️ Administração")
 
