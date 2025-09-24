@@ -1,0 +1,265 @@
+.metric {text-align:center}
+.block-container {padding-top: 2rem;}
+section[data-testid="stSidebar"] {width: 320px;}
+
+/* Paleta de cores personalizada - Rosa claro, Rosa Pink e Branco */
+:root {
+    --rosa-claro: #FFB6C1;      /* Light Pink */
+    --rosa-pink: #FF69B4;       /* Hot Pink */
+    --branco: #FFFFFF;          /* White */
+    --rosa-claro-hover: #FFA0B4; /* Light Pink Hover */
+    --rosa-pink-hover: #FF1493;  /* Deep Pink */
+}
+
+/* Esconder o header do Streamlit */
+.stApp > header {
+    display: none !important;
+}
+
+.stApp > header + div {
+    margin-top: 0;
+}
+
+/* Esconder TUDO exceto o conteúdo principal na página de login */
+.stApp:has(.stMarkdown:contains("Bem-vindo(a)")) section[data-testid="stSidebar"] {
+    display: none !important;
+}
+
+.stApp:has(.stMarkdown:contains("Bem-vindo(a)")) #root > div:nth-child(1) > div.withScreencast > div > div > section {
+    display: none !important;
+}
+
+/* Esconder sidebar quando não logado */
+.stApp:not(:has(.stMarkdown:contains("Sistema de Encomendas"))) section[data-testid="stSidebar"] {
+    display: none !important;
+}
+
+.stApp:not(:has(.stMarkdown:contains("Sistema de Encomendas"))) #root > div:nth-child(1) > div.withScreencast > div > div > section {
+    display: none !important;
+}
+
+/* Estilização da página de login - centralizar e limpar */
+.stApp:has(.stMarkdown:contains("Bem-vindo(a)")) .main .block-container {
+    max-width: 500px !important;
+    margin: 0 auto !important;
+    padding: 2rem !important;
+    text-align: center !important;
+}
+
+/* Estilizar o formulário de login */
+.stApp:has(.stMarkdown:contains("Bem-vindo(a)")) .stForm {
+    background-color: var(--branco) !important;
+    border: 2px solid var(--rosa-pink) !important;
+    border-radius: 12px !important;
+    padding: 2rem !important;
+    box-shadow: 0 4px 8px rgba(255, 105, 180, 0.2) !important;
+}
+
+/* Estilizar os inputs do login */
+.stApp:has(.stMarkdown:contains("Bem-vindo(a)")) .stTextInput > div > div > input {
+    border: 2px solid var(--rosa-claro) !important;
+    border-radius: 8px !important;
+    padding: 12px !important;
+    font-size: 16px !important;
+}
+
+.stApp:has(.stMarkdown:contains("Bem-vindo(a)")) .stTextInput > div > div > input:focus {
+    border-color: var(--rosa-pink) !important;
+    box-shadow: 0 0 0 2px rgba(255, 105, 180, 0.2) !important;
+}
+
+/* Estilizar o botão de login */
+.stApp:has(.stMarkdown:contains("Bem-vindo(a)")) .stButton > button {
+    background-color: var(--rosa-pink) !important;
+    color: var(--branco) !important;
+    border: none !important;
+    border-radius: 8px !important;
+    padding: 12px 24px !important;
+    font-size: 16px !important;
+    font-weight: 600 !important;
+    width: 100% !important;
+    margin-top: 1rem !important;
+}
+
+.stApp:has(.stMarkdown:contains("Bem-vindo(a)")) .stButton > button:hover {
+    background-color: var(--rosa-pink-hover) !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 4px 8px rgba(255, 105, 180, 0.3) !important;
+}
+
+/* Estilização da sidebar */
+section[data-testid="stSidebar"] {
+    background-color: var(--rosa-claro) !important;
+    border-right: 2px solid var(--rosa-pink);
+}
+
+
+/* Estilização da sidebar correta */
+#root > div:nth-child(1) > div.withScreencast > div > div > section {
+    background-color: var(--branco) !important;
+    border-radius: 12px !important;
+    border: 2px solid var(--rosa-pink) !important;
+    margin: 8px !important;
+    padding: 16px !important;
+    box-shadow: 0 4px 8px rgba(255, 105, 180, 0.2) !important;
+}
+
+#root > div:nth-child(1) > div.withScreencast > div > div > section > div.st-emotion-cache-155jwzh.e6f82ta2 {
+    background-color: transparent !important;
+    border: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    box-shadow: none !important;
+}
+
+/* Links dentro da sidebar correta */
+#root > div:nth-child(1) > div.withScreencast > div > div > section > div.st-emotion-cache-155jwzh.e6f82ta2 a {
+    color: var(--rosa-pink) !important;
+    text-decoration: none !important;
+    font-weight: 600 !important;
+    padding: 12px 16px !important;
+    border-radius: 8px !important;
+    transition: all 0.3s ease !important;
+    display: block !important;
+    margin: 4px 0 !important;
+    background-color: var(--rosa-claro) !important;
+    border: 1px solid var(--rosa-pink) !important;
+    text-align: center !important;
+    font-size: 14px !important;
+}
+
+/* Hover dos links da sidebar correta */
+#root > div:nth-child(1) > div.withScreencast > div > div > section > div.st-emotion-cache-155jwzh.e6f82ta2 a:hover {
+    background-color: var(--rosa-pink) !important;
+    color: var(--branco) !important;
+    border-color: var(--rosa-pink-hover) !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 4px 8px rgba(255, 105, 180, 0.3) !important;
+}
+
+/* Títulos dentro da sidebar correta */
+#root > div:nth-child(1) > div.withScreencast > div > div > section > div.st-emotion-cache-155jwzh.e6f82ta2 h1,
+#root > div:nth-child(1) > div.withScreencast > div > div > section > div.st-emotion-cache-155jwzh.e6f82ta2 h2,
+#root > div:nth-child(1) > div.withScreencast > div > div > section > div.st-emotion-cache-155jwzh.e6f82ta2 h3 {
+    color: var(--rosa-pink) !important;
+    font-weight: 700 !important;
+    text-align: center !important;
+    margin-bottom: 16px !important;
+    padding: 8px !important;
+    background-color: var(--rosa-claro) !important;
+    border-radius: 8px !important;
+    border: 1px solid var(--rosa-pink) !important;
+    font-size: 16px !important;
+}
+
+/* Botões da sidebar */
+section[data-testid="stSidebar"] .stButton > button {
+    background-color: var(--branco) !important;
+    color: var(--rosa-pink) !important;
+    border: 2px solid var(--rosa-pink) !important;
+    border-radius: 8px !important;
+    font-weight: 600 !important;
+    transition: all 0.3s ease !important;
+}
+
+section[data-testid="stSidebar"] .stButton > button:hover {
+    background-color: var(--rosa-pink) !important;
+    color: var(--branco) !important;
+    border-color: var(--rosa-pink-hover) !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 4px 8px rgba(255, 105, 180, 0.3) !important;
+}
+
+/* Links de navegação da sidebar */
+section[data-testid="stSidebar"] a {
+    color: var(--rosa-pink) !important;
+    text-decoration: none !important;
+    font-weight: 500 !important;
+    padding: 8px 12px !important;
+    border-radius: 6px !important;
+    transition: all 0.3s ease !important;
+    display: block !important;
+    margin: 4px 0 !important;
+}
+
+section[data-testid="stSidebar"] a:hover {
+    background-color: var(--branco) !important;
+    color: var(--rosa-pink-hover) !important;
+    transform: translateX(4px) !important;
+}
+
+/* Títulos da sidebar */
+section[data-testid="stSidebar"] h1,
+section[data-testid="stSidebar"] h2,
+section[data-testid="stSidebar"] h3 {
+    color: var(--rosa-pink) !important;
+    text-align: center !important;
+    margin-bottom: 20px !important;
+}
+
+/* Cards */
+.st-emotion-cache-1rps8b2 {
+    border-radius: 12px;
+    border: 1px solid var(--rosa-claro);
+    box-shadow: 0 2px 4px rgba(255, 182, 193, 0.2);
+}
+
+/* Botões principais */
+.stButton > button {
+    background-color: var(--rosa-pink) !important;
+    color: var(--branco) !important;
+    border: none !important;
+    border-radius: 8px !important;
+    font-weight: 600 !important;
+    transition: all 0.3s ease !important;
+}
+
+.stButton > button:hover {
+    background-color: var(--rosa-pink-hover) !important;
+    transform: translateY(-1px) !important;
+    box-shadow: 0 4px 8px rgba(255, 105, 180, 0.3) !important;
+}
+
+/* Métricas */
+.metric {
+    text-align: center;
+    background-color: var(--branco);
+    border: 2px solid var(--rosa-claro);
+    border-radius: 12px;
+    padding: 16px;
+    margin: 8px 0;
+}
+
+/* Formulários */
+.stTextInput > div > div > input,
+.stTextArea > div > div > textarea,
+.stSelectbox > div > div > select {
+    border: 2px solid var(--rosa-claro) !important;
+    border-radius: 8px !important;
+}
+
+.stTextInput > div > div > input:focus,
+.stTextArea > div > div > textarea:focus,
+.stSelectbox > div > div > select:focus {
+    border-color: var(--rosa-pink) !important;
+    box-shadow: 0 0 0 2px rgba(255, 105, 180, 0.2) !important;
+}
+
+/* Alertas e mensagens */
+.stSuccess {
+    background-color: rgba(255, 182, 193, 0.1) !important;
+    border: 1px solid var(--rosa-claro) !important;
+    color: var(--rosa-pink) !important;
+}
+
+.stError {
+    background-color: rgba(255, 105, 180, 0.1) !important;
+    border: 1px solid var(--rosa-pink) !important;
+    color: var(--rosa-pink-hover) !important;
+}
+
+.stInfo {
+    background-color: rgba(255, 182, 193, 0.1) !important;
+    border: 1px solid var(--rosa-claro) !important;
+    color: var(--rosa-pink) !important;
+}
