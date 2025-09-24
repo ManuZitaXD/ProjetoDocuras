@@ -199,12 +199,128 @@ section[data-testid="stSidebar"] a {
     transition: all 0.3s ease !important;
     display: block !important;
     margin: 4px 0 !important;
+    background-color: var(--rosa-claro) !important;
+    border: 1px solid var(--rosa-pink) !important;
 }
 
 section[data-testid="stSidebar"] a:hover {
     background-color: var(--branco) !important;
     color: var(--rosa-pink-hover) !important;
     transform: translateX(4px) !important;
+    border-color: var(--rosa-pink-hover) !important;
+}
+
+/* Estilização específica para o menu automático do Streamlit */
+section[data-testid="stSidebar"] div[data-testid="stSidebarNav"] a {
+    background-color: var(--rosa-claro) !important;
+    color: var(--rosa-pink) !important;
+    border: 1px solid var(--rosa-pink) !important;
+    border-radius: 8px !important;
+    padding: 10px 12px !important;
+    margin: 4px 0 !important;
+    font-weight: 600 !important;
+    text-align: center !important;
+    transition: all 0.3s ease !important;
+}
+
+section[data-testid="stSidebar"] div[data-testid="stSidebarNav"] a:hover {
+    background-color: var(--branco) !important;
+    color: var(--rosa-pink-hover) !important;
+    border-color: var(--rosa-pink-hover) !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 4px 8px rgba(255, 105, 180, 0.3) !important;
+}
+
+/* Estilização para dispositivos móveis */
+@media (max-width: 768px) {
+    section[data-testid="stSidebar"] a {
+        background-color: var(--rosa-claro) !important;
+        border: 1px solid var(--rosa-pink) !important;
+        border-radius: 8px !important;
+        padding: 12px 16px !important;
+        margin: 6px 0 !important;
+        font-size: 16px !important;
+        font-weight: 600 !important;
+        text-align: center !important;
+    }
+    
+    section[data-testid="stSidebar"] div[data-testid="stSidebarNav"] a {
+        background-color: var(--rosa-claro) !important;
+        border: 2px solid var(--rosa-pink) !important;
+        border-radius: 10px !important;
+        padding: 14px 16px !important;
+        margin: 8px 0 !important;
+        font-size: 18px !important;
+        font-weight: 700 !important;
+        text-align: center !important;
+        min-height: 50px !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+    }
+    
+    section[data-testid="stSidebar"] div[data-testid="stSidebarNav"] a:hover {
+        background-color: var(--branco) !important;
+        border-color: var(--rosa-pink-hover) !important;
+        transform: scale(1.05) !important;
+        box-shadow: 0 6px 12px rgba(255, 105, 180, 0.4) !important;
+    }
+}
+
+/* Estilização adicional para garantir que os botões do menu automático tenham fundo rosa */
+section[data-testid="stSidebar"] .st-emotion-cache-1cypcdh a,
+section[data-testid="stSidebar"] .st-emotion-cache-1rps8b2 a,
+section[data-testid="stSidebar"] .st-emotion-cache-1d391ky a,
+section[data-testid="stSidebar"] .st-emotion-cache-1rps8b2 a {
+    background-color: var(--rosa-claro) !important;
+    color: var(--rosa-pink) !important;
+    border: 1px solid var(--rosa-pink) !important;
+    border-radius: 8px !important;
+    padding: 10px 12px !important;
+    margin: 4px 0 !important;
+    font-weight: 600 !important;
+    text-align: center !important;
+    transition: all 0.3s ease !important;
+}
+
+section[data-testid="stSidebar"] .st-emotion-cache-1cypcdh a:hover,
+section[data-testid="stSidebar"] .st-emotion-cache-1rps8b2 a:hover,
+section[data-testid="stSidebar"] .st-emotion-cache-1d391ky a:hover,
+section[data-testid="stSidebar"] .st-emotion-cache-1rps8b2 a:hover {
+    background-color: var(--branco) !important;
+    color: var(--rosa-pink-hover) !important;
+    border-color: var(--rosa-pink-hover) !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 4px 8px rgba(255, 105, 180, 0.3) !important;
+}
+
+/* Forçar estilização em todos os links da sidebar */
+section[data-testid="stSidebar"] a[href*="pages/"],
+section[data-testid="stSidebar"] a[href*="app.py"],
+section[data-testid="stSidebar"] a[href*="1_Clientes"],
+section[data-testid="stSidebar"] a[href*="2_Encomendas"],
+section[data-testid="stSidebar"] a[href*="3_Admin"] {
+    background-color: var(--rosa-claro) !important;
+    color: var(--rosa-pink) !important;
+    border: 1px solid var(--rosa-pink) !important;
+    border-radius: 8px !important;
+    padding: 10px 12px !important;
+    margin: 4px 0 !important;
+    font-weight: 600 !important;
+    text-align: center !important;
+    transition: all 0.3s ease !important;
+}
+
+section[data-testid="stSidebar"] a[href*="pages/"]:hover,
+section[data-testid="stSidebar"] a[href*="app.py"]:hover,
+section[data-testid="stSidebar"] a[href*="1_Clientes"]:hover,
+section[data-testid="stSidebar"] a[href*="2_Encomendas"]:hover,
+section[data-testid="stSidebar"] a[href*="3_Admin"]:hover {
+    background-color: var(--branco) !important;
+    color: var(--rosa-pink-hover) !important;
+    border-color: var(--rosa-pink-hover) !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 4px 8px rgba(255, 105, 180, 0.3) !important;
 }
 
 /* Títulos da sidebar */
